@@ -17,14 +17,210 @@
   <script>
     window.$docsify = {
       el: '#main',
-      loadSidebar: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
         subMaxLevel: 2,
+        /*导航栏*/
         loadNavbar: true
-      }
+      },
+
+      /*封面*/
+      coverpage: true,
+      coverpage: {
+        '/': '_coverpage.md'
+      },
+
+      /*配置项目*/
+      /*
+      * repo
+      *   类型：String
+      *   默认值：null
+      *   含义：配置仓库地址或者 username/repo 的字符串，会在页面右上角渲染一个 GitHub Corner 挂件。
+      * */
+      /*******************************/
+      repo: 'https://github.com/Crisimple',
+      /*
+      * maxLevel
+      *   类型：Number
+      *   默认值: 6
+      *   含义：默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+      *
+      * */
+      /*******************************/
+      maxLevel: 6,
+      /*
+      * loadNavbar
+      *   类型：Boolean|String
+      *   默认值: false
+      *   含义：加载自定义导航栏，参考定制导航栏 了解用法。设置为 true 后会加载 _navbar.md 文件，也可以自定义加载的文件名。
+      * 实例：
+      * // 加载 _navbar.md
+      * loadNavbar: true,
+      * // 加载 nav.md
+      * loadNavbar: 'nav.md',
+      * */
+      /*******************************/
+      /*
+      * loadSidebar
+      *   类型：Boolean|String
+      *   默认值: false
+      *   含义：加载自定义侧边栏，参考多页文档。设置为 true 后会加载 _sidebar.md 文件，也可以自定义加载的文件名。
+      * 实例：
+      * window.$docsify = {
+      * // 加载 _sidebar.md
+      *   loadSidebar: true,
+      *
+      *   // 加载 summary.md
+      *   loadSidebar: 'summary.md',
+      * };
+      * */
+      /*******************************/
+      /*
+      * themeColor
+      *   类型：String
+      *   含义：替换主题色。利用 CSS3 支持变量的特性，对于老的浏览器有 polyfill 处理。
+      * */
+      themeColor: '#1296db',
+      /*******************************/
+      /*
+      * autoHeader
+      *   类型：Boolean
+      *   含义：同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题。#78
+      *
+      * */
+      loadSidebar: true,
+      autoHeader: true,
+      /*******************************/
+      /*
+      * auto2top
+      *   类型：Boolean
+      *   默认值: false
+      *   含义：切换页面后是否自动跳转到页面顶部。
+      * */
+      auto2top: true,
+      /*******************************/
+      /*
+      * relativePath
+      *  类型: Boolean
+      *  默认值: false
+      *  含义：如果该选项设为 true ，那么链接会使用相对路径。
+      * */
+      relativePath: true,
+      /*******************************/
+      /*
+      * logo
+      *   类型: String
+      *   含义：在侧边栏中出现的网站图标，你可以使用CSS来更改大小
+      * */
+      logo: '_media/wechat.jpg',
+      /*******************************/
+      /*
+      * name
+      *   类型：String
+      * 文档标题，会显示在侧边栏顶部。
+      * */
+      name: '<span>docsify</span>',
+      /*******************************/
+      /*
+      * executeScript
+      *   类型：Boolean
+      * 执行文档里的 script 标签里的脚本，只执行第一个 script (demo)。 如果 Vue 存在，则自动开启。
+      * */
+      executeScript: true,
+      /*******************************/
+      /*
+      * noEmoji
+      *   类型: Boolean
+      * 禁用 emoji 解析。
+      * */
+      noEmoji: true,
+      /*******************************/
+      /*
+      * mergeNavbar
+      *   类型: Boolean
+      * 小屏设备下合并导航栏到侧边栏。
+      * */
+      mergeNavbar: true,
+      /*******************************/
+      /*
+      * formatUpdated
+      *   类型: String|Function
+      * 我们可以通过 {docsify-updated} 变量显示文档更新日期.
+      * 并且通过 formatUpdated配置日期格式。参考 https://github.com/lukeed/tinydate#patterns
+      * */
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      formatUpdated: function(time) {
+        // ...
+        return time;
+      },
+      /*******************************/
+      /*
+      * externalLinkTarget
+      *   类型: String
+      *   默认: _blank
+      * 外部链接的打开方式。默认为 _blank （在新窗口或者标签页中打开）
+      * */
+      /*******************************/
+      externalLinkTarget: '_self', // default: '_blank',
+      /*
+      * cornerExternalLinkTarget
+      *   类型:String
+      *   默认值:_blank
+      * 右上角链接的打开方式。默认为 _blank （在新窗口或者标签页中打开）
+      * */
+      cornerExternalLinkTarget: '_self', // default: '_blank',
+      /*******************************/
+      /*
+      * onlyCover
+      *   类型: Boolean
+      * 只在访问主页时加载封面。
+      * */
+      onlyCover: false,
+      /*******************************/
+      /*
+      * ext
+      * 类型: String
+      * 资源的文件扩展名。
+      * */
+      ext: '.md',
+      fallbackLanguages: ['fr', 'de'],
+      /*******************************/
+      /*
+      * notFoundPage
+      *   类型: Boolean | String | Object
+      * 在找不到指定页面时加载_404.md
+      * */
+      notFoundPage: true,
+      /*******************************/
+      /*
+      * topMargin
+      *   类型: Number
+      *   默认值: 0
+      * 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。
+      * 当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏。
+      * */
+      topMargin: 90,
+
+
+      /******************************************************************************/
+      /*
+      * Disqus: Disqus评论系统支持。 https://disqus.com/
+      * */
+      disqus: 'shortname',
+
+
+
+
     }
   </script>
+
+  <!--封面-->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <!--emoji-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!--图片缩放 -Zoom image-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!--Disqus-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
 </body>
 </html>
