@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](_media/wechat.jpg)
+![logo](_media/wechat.png)
 
 # DeepHub <small>1.0</small>
 

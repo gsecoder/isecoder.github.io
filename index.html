@@ -10,19 +10,15 @@
 </head>
 <body>
   <nav>
-    <a href="#/">Home</a>
-    <a href="#/">Guide</a>
+    <a href="#/">首页</a>
+    <a href="#/">python</a>
+    <a href="#/WebFront">web_front</a>
   </nav>
   <div data-app id="main">加载中</div>
   <script>
     window.$docsify = {
       el: '#main',
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
-        subMaxLevel: 2,
-        /*导航栏*/
-        loadNavbar: true
-      },
+      loadNavbar: true,
 
       /*封面*/
       coverpage: true,
@@ -112,7 +108,7 @@
       *   类型: String
       *   含义：在侧边栏中出现的网站图标，你可以使用CSS来更改大小
       * */
-      logo: '_media/wechat.jpg',
+      logo: '_media/wechat.png',
       /*******************************/
       /*
       * name
@@ -133,7 +129,7 @@
       *   类型: Boolean
       * 禁用 emoji 解析。
       * */
-      noEmoji: true,
+      noEmoji: false,
       /*******************************/
       /*
       * mergeNavbar
@@ -199,7 +195,7 @@
       * 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间。
       * 当你使用 固定页头 布局时这个选项很有用，可以让你的锚点对齐标题栏。
       * */
-      topMargin: 90,
+      topMargin: 0,
 
 
       /******************************************************************************/
