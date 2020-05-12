@@ -1,5 +1,5 @@
-* [首页](/_coverpage.md)
-* python知识库
-    * [快速开始](python.md)
-    * [python连接数据库](python/python.md)
+* [首页](/home.md)
+* python
+    * [快速开始](/python/python.md)
+    * [python连接数据库](python.md)
 * [WebFront](/web_front/)
