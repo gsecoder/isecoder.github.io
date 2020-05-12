@@ -17,6 +17,12 @@
   </nav>
   <div data-app id="main">加载中</div>
   <script>
+    /*
+    * PWA注册
+    * */
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
     window.$docsify = {
       el: '#main',
       loadNavbar: true,
