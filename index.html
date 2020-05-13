@@ -17,12 +17,14 @@
   </nav>
   <div data-app id="main">加载中</div>
   <script>
+
     /*
     * PWA注册
     * */
     if (typeof navigator.serviceWorker !== 'undefined') {
       navigator.serviceWorker.register('sw.js')
     }
+
     window.$docsify = {
       el: '#main',
       loadNavbar: true,
@@ -40,8 +42,8 @@
       *   默认值：null
       *   含义：配置仓库地址或者 username/repo 的字符串，会在页面右上角渲染一个 GitHub Corner 挂件。
       * */
-      /*******************************/
       repo: 'https://github.com/Crisimple',
+
       /*
       * maxLevel
       *   类型：Number
@@ -49,8 +51,8 @@
       *   含义：默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
       *
       * */
-      /*******************************/
       maxLevel: 6,
+
       /*
       * loadNavbar
       *   类型：Boolean|String
@@ -62,7 +64,7 @@
       * // 加载 nav.md
       * loadNavbar: 'nav.md',
       * */
-      /*******************************/
+
       /*
       * loadSidebar
       *   类型：Boolean|String
@@ -77,14 +79,14 @@
       *   loadSidebar: 'summary.md',
       * };
       * */
-      /*******************************/
+
       /*
       * themeColor
       *   类型：String
       *   含义：替换主题色。利用 CSS3 支持变量的特性，对于老的浏览器有 polyfill 处理。
       * */
       themeColor: '#1296db',
-      /*******************************/
+
       /*
       * autoHeader
       *   类型：Boolean
@@ -93,7 +95,7 @@
       * */
       loadSidebar: true,
       autoHeader: true,
-      /*******************************/
+
       /*
       * auto2top
       *   类型：Boolean
@@ -101,7 +103,7 @@
       *   含义：切换页面后是否自动跳转到页面顶部。
       * */
       auto2top: true,
-      /*******************************/
+
       /*
       * relativePath
       *  类型: Boolean
@@ -109,42 +111,42 @@
       *  含义：如果该选项设为 true ，那么链接会使用相对路径。
       * */
       relativePath: true,
-      /*******************************/
+
       /*
       * logo
       *   类型: String
       *   含义：在侧边栏中出现的网站图标，你可以使用CSS来更改大小
       * */
       // logo: '_media/wechat.png',
-      /*******************************/
+
       /*
       * name
       *   类型：String
       * 文档标题，会显示在侧边栏顶部。
       * */
       name: '<span>DeepHub</span>',
-      /*******************************/
+
       /*
       * executeScript
       *   类型：Boolean
       * 执行文档里的 script 标签里的脚本，只执行第一个 script (demo)。 如果 Vue 存在，则自动开启。
       * */
       executeScript: true,
-      /*******************************/
+
       /*
       * noEmoji
       *   类型: Boolean
       * 禁用 emoji 解析。
       * */
       noEmoji: false,
-      /*******************************/
+
       /*
       * mergeNavbar
       *   类型: Boolean
       * 小屏设备下合并导航栏到侧边栏。
       * */
       mergeNavbar: true,
-      /*******************************/
+
       /*
       * formatUpdated
       *   类型: String|Function
@@ -156,30 +158,30 @@
         // ...
         return time;
       },
-      /*******************************/
+
       /*
       * externalLinkTarget
       *   类型: String
       *   默认: _blank
       * 外部链接的打开方式。默认为 _blank （在新窗口或者标签页中打开）
       * */
-      /*******************************/
-      externalLinkTarget: '_self', // default: '_blank',
+      externalLinkTarget: '_self',
+
       /*
       * cornerExternalLinkTarget
       *   类型:String
       *   默认值:_blank
       * 右上角链接的打开方式。默认为 _blank （在新窗口或者标签页中打开）
       * */
-      cornerExternalLinkTarget: '_self', // default: '_blank',
-      /*******************************/
+      cornerExternalLinkTarget: '_self',
+
       /*
       * onlyCover
       *   类型: Boolean
       * 只在访问主页时加载封面。
       * */
       onlyCover: false,
-      /*******************************/
+
       /*
       * ext
       * 类型: String
@@ -187,14 +189,14 @@
       * */
       ext: '.md',
       fallbackLanguages: ['fr', 'de'],
-      /*******************************/
+
       /*
       * notFoundPage
       *   类型: Boolean | String | Object
       * 在找不到指定页面时加载_404.md
       * */
       notFoundPage: true,
-      /*******************************/
+
       /*
       * topMargin
       *   类型: Number
@@ -204,15 +206,10 @@
       * */
       topMargin: 0,
 
-
-      /******************************************************************************/
       /*
       * Disqus: Disqus评论系统支持。 https://disqus.com/
       * */
-      disqus: 'shortname',
-
-
-
+      // disqus: 'shortname',
 
     }
   </script>
