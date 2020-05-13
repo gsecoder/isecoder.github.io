@@ -1,3 +1,3 @@
-* [首页1](python.md "Home Page")
-* [导航1](python.md "Guide Page")
-* [小米1](python.md "MIUI系统精简")
+* [](python.md)
+* [](python_database.md)
+* [](home.md)

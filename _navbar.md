@@ -1,5 +1,6 @@
 * [首页](/home.md)
-* python
-    * [快速开始](/python/python.md)
-    * [python连接数据库](python.md)
-* [WebFront](/web_front/)
+* [python](python/home.md)
+    * [python基础](python/python.md)
+    * [python连接数据库](python/python_database.md)
+* [web](web)
+    * [vue](web/vue.md)

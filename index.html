@@ -11,11 +11,12 @@
 </head>
 <body>
   <nav>
-    <a href="#/">首页</a>
+    <a href="#/home.md">deephub</a>
     <a href="#/">python</a>
-    <a href="#/">web_front</a>
+    <a href="#/">web</a>
   </nav>
-  <div data-app id="main">加载中</div>
+  <div data-app id="main" style="font-size: larger">加载中</div>
+
   <script>
 
     /*
@@ -74,11 +75,22 @@
       * window.$docsify = {
       * // 加载 _sidebar.md
       *   loadSidebar: true,
-      *
       *   // 加载 summary.md
       *   loadSidebar: 'summary.md',
       * };
       * */
+      loadSidebar: '_sidebar.md',
+      alias: {
+        // '/.*/_sidebar.md': '/_siderbar.md',
+        '/.*/Python/_sidebar.md': '/Python/_sidebar.md',
+        '/.*/WebFront/_sidebar.md': '/WebFront/_sidebar.md',
+      },
+
+      /*
+      * subMaxLevel
+      *
+      * */
+      subMaxLevel: 5,
 
       /*
       * themeColor
@@ -221,6 +233,13 @@
   <!--图片缩放 -Zoom image-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!--Disqus-->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
+<!--  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>-->
+  <!--代码高亮-->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+  <!--实现侧边栏折叠-->
+  <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
 </body>
 </html>
