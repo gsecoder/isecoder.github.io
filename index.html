@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" >
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
   <nav>
@@ -129,7 +130,8 @@
       *   类型: String
       *   含义：在侧边栏中出现的网站图标，你可以使用CSS来更改大小
       * */
-      // logo: '_media/wechat.png',
+      logo: '_media/wechat.png',
+      // logo: ![logo]('_media/wechat.png', 'size:=100x100'),
 
       /*
       * name
@@ -157,7 +159,7 @@
       *   类型: Boolean
       * 小屏设备下合并导航栏到侧边栏。
       * */
-      mergeNavbar: true,
+      // mergeNavbar: true,
 
       /*
       * formatUpdated
@@ -223,17 +225,94 @@
       * */
       // disqus: 'shortname',
 
+      /*
+      * 搜索
+      * */
+      search: 'auto', // 默认值
+
+      search : [
+        '/',            // => /README.md
+        '/guide',       // => /guide.md
+        '/get-started', // => /get-started.md
+        '/zh-cn/',      // => /zh-cn/README.md
+      ],
+
+      // 完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: [], // or 'auto'
+        placeholder: 'Type to search',
+        // 支持本地化
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Type to search'
+        },
+        noData: 'No Results!',
+        // 支持本地化
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results'
+        },
+        // 搜索标题的最大层级, 1 - 6
+        depth: 2,
+      },
+
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      },
+
+      /*在GitHub编辑*/
+      // plugins: [
+      //   EditOnGithubPlugin.create(
+      //           'https://github.com/docsifyjs/docsify/blob/master/docs/',
+      //           null,
+      //           function(file) {
+      //             if (file.indexOf('en') === -1) {
+      //               return '编辑'
+      //             } else {
+      //               return 'edit on git'
+      //             }
+      //           }
+      //   )
+      // ],
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href="https://github.com/Crisimple">DeepHub</a> &copy;2016 - 2020.</span>',
+            '<span>Proudly published with <a href="https://crisimple.github.io" target="_blank">crisimple</a>.</span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ],
+
     }
   </script>
 
+  <!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统。-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+
   <!--封面-->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
   <!--emoji-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
   <!--图片缩放 -Zoom image-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
   <!--Disqus-->
 <!--  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>-->
+
   <!--代码高亮-->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
@@ -241,5 +320,23 @@
   <!--实现侧边栏折叠-->
   <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
+  <!--分页导航-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!--字数统计-->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+  <!--复制到剪贴板-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+  <!--外链js脚本执行-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+
+  <!--在GitHub编辑代码-->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+
+
+
+  <!---->
 </body>
 </html>
