@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="favicon.ico" >
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
 </head>
 <body>
   <nav>
@@ -293,6 +294,11 @@
           });
         }
       ],
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6',
+        title: 'Table of Contents',
+      },
 
     }
   </script>
@@ -335,6 +341,7 @@
   <!--在GitHub编辑代码-->
   <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
 
 
   <!---->
