@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="favicon.ico" >
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <!--<link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">-->
 </head>
 <body>
   <nav>
@@ -81,7 +81,7 @@
       *   loadSidebar: 'summary.md',
       * };
       * */
-      loadSidebar: '_sidebar.md',
+      // loadSidebar: '_sidebar.md',
       alias: {
         // '/.*/_sidebar.md': '/_siderbar.md',
         '/.*/Python/_sidebar.md': '/Python/_sidebar.md',
@@ -131,8 +131,8 @@
       *   类型: String
       *   含义：在侧边栏中出现的网站图标，你可以使用CSS来更改大小
       * */
-      logo: '_media/wechat.png',
-      // logo: ![logo]('_media/wechat.png', 'size:=100x100'),
+      // logo: '_media/wechat.png',
+      logo: ![logo]('_media/wechat.png', ':size:=100x100'),
 
       /*
       * name
@@ -341,9 +341,8 @@
   <!--在GitHub编辑代码-->
   <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 
-  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <!--TOC导航-->
+  <!--<script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>-->
 
-
-  <!---->
 </body>
 </html>

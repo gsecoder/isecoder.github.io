@@ -1,16 +1,14 @@
 <!-- _coverpage.md -->
 
-![logo](_media/wechat.png)
+# DeepHub 与你一起深度学习<small>1.0</small>
 
-# DeepHub <small>1.0</small>
+?> DeepHub 与你一起深度学习，**点击左侧头像可返回首页**
 
-> Be a Simple Myself!
+!> 学习、**总结**、分享
+    
 
-- 学习、总结、分享
-- 测试开发、Python、前端、微信开发
-- 任重而道远
+!> 测试开发、**python**、前端、微信开发
 
-[掘金](https://juejin.im/user/5890963661ff4b006bebc3a5)
-[B站](https://space.bilibili.com/6977085)
-[微博](https://weibo.com/crisimple)
-[Get Started](/home.md)
+!> 任重而道远
+
+
