@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" >
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+<!--  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">-->
   <!--<link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">-->
 </head>
 <body>
   <nav>
-    <a href="#/home.md">deephub</a>
+    <a href="#/home.md">首页</a>
     <a href="#/">python</a>
     <a href="#/">web</a>
   </nav>
@@ -83,7 +83,7 @@
       * */
       // loadSidebar: '_sidebar.md',
       alias: {
-        // '/.*/_sidebar.md': '/_siderbar.md',
+        '/.*/_sidebar.md': '/_siderbar.md',
         '/.*/Python/_sidebar.md': '/Python/_sidebar.md',
         '/.*/WebFront/_sidebar.md': '/WebFront/_sidebar.md',
       },
@@ -132,7 +132,7 @@
       *   含义：在侧边栏中出现的网站图标，你可以使用CSS来更改大小
       * */
       // logo: '_media/wechat.png',
-      logo: ![logo]('_media/wechat.png', ':size:=100x100'),
+      // logo: '_media/wechat.png',
 
       /*
       * name
@@ -234,8 +234,8 @@
       search : [
         '/',            // => /README.md
         '/guide',       // => /guide.md
-        '/get-started', // => /get-started.md
-        '/zh-cn/',      // => /zh-cn/README.md
+        '/miui.md', // => /get-started.md
+        '/python/',      // => /zh-cn/README.md
       ],
 
       // 完整配置参数
@@ -245,13 +245,13 @@
         placeholder: 'Type to search',
         // 支持本地化
         placeholder: {
-          '/zh-cn/': '搜索',
+          '/python/': '搜索',
           '/': 'Type to search'
         },
         noData: 'No Results!',
         // 支持本地化
         noData: {
-          '/zh-cn/': '找不到结果',
+          '/python/': '找不到结果',
           '/': 'No Results'
         },
         // 搜索标题的最大层级, 1 - 6
@@ -304,11 +304,12 @@
   </script>
 
   <!--Gitalk，一个现代化的，基于Preact和Github Issue的评论系统。-->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<!--  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>-->
+<!--  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>-->
 
   <!--封面-->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<!--  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>-->
 
   <!--emoji-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
