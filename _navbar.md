@@ -1,6 +1,0 @@
-* [首页](/home.md)
-* [python](python/home.md)
-    * [python基础](python/python.md)
-    * [python连接数据库](python/python_database.md)
-* [web](web)
-    * [vue](web/vue.md)
