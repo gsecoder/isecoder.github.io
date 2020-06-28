@@ -14,5 +14,5 @@ fi
 
 # 提交代码
 git add .
-git commit -m "crisimple.github.io init"
+git commit -m "siderBar"
 git push origin "${current_branch}"
